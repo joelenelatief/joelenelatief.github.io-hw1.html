@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Joelene's Simple HTML + CSS Page</title>
+<link rel="stylesheet" href="format.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="description" content="web page for CIS 128 created by Joelene Latief">
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("div").animate({fontSize: '3em'}, 		"slow");
+	$("div").animate({fontSize: '1em'}, 		"slow");
+	$("div").css({"color": "green"}, 		"slow");
+	$("img").css("border","0px solid 		#6666ff").animate({'borderWidth':'4px', 	'borderColor':'#6666ff'},500)
+    });
+});
+</script>
+</head>
+
+<body>
+
+<div style="color:#0000FF">
+	<h1>Simple HTML and CSS Page</h1>
+</div>
+
+<img src="Senior_Portrait.jpg" alt="senior_portrait">
+
+<p>My name is Joelene Latief and I am a senior at Design Tech High School. I have a passion for graphic design, but I am pretty new to mobile programming. Through my business Joelene Jane Cakes, I was able to explore web design (though I used the GoDaddy web-builder to create it and didn't code it using HTML) while pursuing my hobby of cake design. My website is <a href="http://www.joelenejane.com/" target="_blank">joelenejane.com</a>. I am still quite a beginner at web/mobile development and am looking forward to learning more. My experience with HTML and CSS is also not very extensive, so I am continuing to learn as I go! It is a lot of fun :)</p>
+<br><br><br><br><br><br><br><br><br>
+<p id="p2">I am attending this class because I am interested in learning more about mobile programming and how I can use it to solve real world problems</p>
+<br>
+<h2>Technologies for this class</h2>
+
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+</ul>
+
+<h2>Resources</h2>
+<ul>
+<li><a href="https://www.w3schools.com" target="_blank">W3 Schools</a><p>This website is called w3 schools and it is useful for beginner web developers as it contains a lot of instructional articles and tutorials on different HTML and CSS functions.</p></li>
+<li><a href="https://bubble.is/" target="_blank">Bubble Mobile Programming</a> <p>This website is called bubble and it is a programming tool that allows you to build applications without code. I think it is a useful prototyping tool.</p></ul>
+
+<button type="button">Start Animation</button>
+
+</body>
+</html>
