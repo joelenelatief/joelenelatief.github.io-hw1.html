@@ -3,7 +3,7 @@
 	}
 		/*the above is a very basic reset rule.  Every browser has a slightly different default for HTML tags.  By using this simple CSS reset, all the more glaring styles 
 		are reset and can now be set to whatever properties that would suit your website best. */
-@media screen and (min-width:501px){
+@media screen and (min-width:721px){
 	body{
 		background:#eaf8fb;	/* a light blue background color. */
 		font-family:Arial, Helvetica, sans-serif; /* the font family for all text on the web page is now either arial, helvetica or a sans-serif font if those two are not available */
@@ -117,7 +117,7 @@
 	.clear{
 		clear:both; /* this clears floats.  This would be used to cancel out a float's behavior on content below it.  */
 	}	}
-@media screen and (max-width:500px)
+@media screen and (max-width:720px)
  {
 body, .header, .footer, .navigation {width:320px;}.column {margin: 10px 0;border-bottom:1px dashed #7b96bc;}
 .navigation ul li [width: 106.6667px;}
