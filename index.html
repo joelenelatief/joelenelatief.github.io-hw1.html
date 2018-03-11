@@ -1,29 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Joelene's Simple HTML + CSS Page</title>
-<link rel="stylesheet" href="format.css">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>Wild Life</title>
 </head>
+
 <body>
-
-<h1>Simple HTML and CSS Page</h1>
-<img src="Senior_Portrait.jpg" alt="senior_portrait">
-<p>My name is Joelene Latief and I am a senior at Design Tech High School. I have a passion for graphic design, but I am pretty new to mobile programming. Through my business Joelene Jane Cakes, I was able to explore web design (though I used the GoDaddy web-builder to create it and didn't code it using HTML) while pursuing my hobby of cake design. My website is <a href="http://www.joelenejane.com/"target="_blank">joelenejane.com</a>. I am still quite a beginner at web/mobile development and am looking forward to learning more. My experience with HTML and CSS is also not very extensive, so I am continuing to learn as I go! It is a lot of fun :)</p>
-<br><br><br><br><br><br><br><br><br>
-<p id="p2">I am attending this class because I am interested in learning more about mobile programming and how I can use it to solve real world problems</p>
-<br>
-<h2>Technologies for this class</h2>
-
-<ul>
-<li>HTML</li>
-<li>CSS</li>
-<li>JavaScript</li>
-</ul>
-
-<h2>Resources</h2>
-<ul>
-<li><a href="https://www.w3schools.com"target="_blank">W3 Schools</a><p>This website is called w3 schools and it is useful for beginner web developers as it contains a lot of instructional articles and tutorials on different HTML and CSS functions.</p></li>
-<li><a href="https://bubble.is/"target="_blank">Bubble Mobile Programming</a> <p>This website is called bubble and it is a programming tool that allows you to build applications without code. I think it is a useful prototyping tool.</p></ul>
+    <div id="header">
+        <h1>Welcome to Wildlife for Life</h1>
+        <h2>We fight for life</h2>
+        
+        <ul class="navigation">
+            <li><a href="index.html" title="home">Home</a></li>
+            <li><a href="#" title="contact">Contact Us</a></li>
+        </ul>
+    </div>
+    
+    <div class="content">
+    
+    <div class="col-right">
+        
+        <h1>The Wild Life is great</h1><br />
+        <p>Wild Life includes all non-domesticated plants, animals and other organisms.</p>
+        <p>Wildlife can be found in all ecosystems. Deserts, forests, rain forests, plains, grasslands, and other areas including the most developed urban sites, all have distinct forms of wildlife.</p><br />
+        
+        <h3>Destruction</h3><br />
+        <img src="images/img1.jpg" class="float-left" alt="alternative text.  This text is for screen readers or in the instance an image can't load, a description of what should have been here." /><p>Exploitation of wild populations has been a characteristic of modern man since our exodus from Africa 130,000 – 70,000 years ago. The rate of extinctions of entire species of plants and animals across the planet has been so high in the last few hundred years it is widely believed that we are in the sixth great extinction event on this planet</p><br />
+        
+        <h3 class="clear">Food, pets, and traditional medicines</h3><br />
+        <p>Anthropologists believe that the Stone Age people and hunter-gatherers relied on wildlife, both plants and animals, for their food. In fact, some species may have been hunted to extinction by early human hunters.</p>
+    </div>
+    
+    <div class="sidebar-left">
+    	<h3>Favorite links</h3>
+    	<ul class="list">
+        	<li><a href="http://wildlife-museum.org/" title="Lindsay Wildlife Museum">Lindsay Wildlife Museum</a></li>
+            <li><a href="http://www.worldwildlife.org/home-full.html" title="WWF">WWF</a></li>
+        </ul>
+        
+        <h3>News</h3>
+        <p>Aug/2012 - About forty Blue whales have been sighted swimming in waters 15 miles west of La Jolla.</p>
+        <p>Aug/2012 - Three tigers have been found dead in India in the last week. The carcass of a ten year old tigress was found in Kanha Tiger Reserve, and another female tiger was found in a very poor state of health in the same reserve. Unfortunately vets could not save her.</p>
+    </div>
+    <br class="clear" />  <!-- this code is clearing the floats from the above divs.  See what happens when you take it away to really learn what clear does... -->
+    </div>
+    <div id="footer">
+        <p>We believe that we can all live together in Planet Earth</p>
+    </div>
 </body>
 </html>
