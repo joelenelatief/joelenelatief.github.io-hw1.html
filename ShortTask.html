@@ -37,14 +37,20 @@ function displayMap( coords ) {
 var googleLatAndLong = new google.maps.LatLng( coords.latitude, coords.longitude );
 
 var mapOptions = {
-zoom: 10,
+zoom: 20,
 center: googleLatAndLong,
 mapTypeId: google.maps.MapTypeId.ROADMAP,
 };
 
 var mapDiv = document.getElementById( 'map' );
 map = new google.maps.Map( mapDiv, mapOptions );
+
+var title = 'Your Location';
+var content = 'You are here: ' + coords.latitude + ', ' + coords.longitude;
+addMarker( map, googleLatAndLong, title, content );
+
 }
+
 function addMarker ( map, latlong, title, content ) {
  var markerOptions = {
  position: latlong,
@@ -62,7 +68,6 @@ google.maps.event.addListener( marker, 'click', function() {
  infoWindow.open(map);
  });
  }
-
 </script>
 </head>
 <body>
@@ -74,9 +79,6 @@ You are at Latitude: _________, Longitude: _________
 </div>
 
 <div id="map" > </div>
-var title = 'Your Location';
-var content = 'You are here: ' + coords.latitude + ', ' + coords.longitude;
-addMarker( map, googleLatAndLong, title, content );
 </div>
 </body>
 </html>
