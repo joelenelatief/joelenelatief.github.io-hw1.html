@@ -62,9 +62,6 @@ google.maps.event.addListener( marker, 'click', function() {
  infoWindow.open(map);
  });
  }
-var title = 'Your Location';
-var content = 'You are here: ' + coords.latitude + ', ' + coords.longitude;
-addMarker( map, googleLatAndLong, title, content );
 
 </script>
 </head>
@@ -77,6 +74,9 @@ You are at Latitude: _________, Longitude: _________
 </div>
 
 <div id="map" > </div>
+var title = 'Your Location';
+var content = 'You are here: ' + coords.latitude + ', ' + coords.longitude;
+addMarker( map, googleLatAndLong, title, content );
 </div>
 </body>
 </html>
