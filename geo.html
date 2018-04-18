@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+    	<h3>My Google Maps Demo</h3>
+	<script src="http://maps.google.com/maps/api/js?sensor=true" > </script>
+	<script type="text/javascript" >
+window.onload = getLocation;
+var geo = navigator.geolocation;
+function getLocation() {
+if( geo ) {
+geo.getCurrentPosition( displayLocation );
+} else {
+alert( "Oops, Geolocation API is not supported" );
+}
+}
+
+function displayLocation( position ) {
+var latitude = position.coords.latitude;
+var longitude = position.coords.longitude;
+
+var div = document.getElementById( 'location' );
+div.innerHTML = "You are at Latitude: " + latitude + ", Longitude: " + longitude;
+
+initMap(position.coords);
+}
+    <div id="map"></div>
+
+      function initMap( coords ) {
+        var googleLatAndLong = {coords.latitude, coords.longitude};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: googleLatAndLong
+        });
+
+        var marker = new google.maps.Marker({
+          position: googleLatAndLong,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbxTG1eYulUuX3z0ZwZhmFW2z_wzIzZog&callback=initMap">
+    </script> 
+  </head>
+  <body>
+<div class="container" >
+<h3> How to find location of a user using HTML5 Geolocation? </h3>
+<div id="location" >
+You are at Latitude: _________, Longitude: _________
+</div>
+<div id="map" > 
+</div>
+</body>
+</html>
