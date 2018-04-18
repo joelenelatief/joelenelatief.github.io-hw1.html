@@ -34,9 +34,6 @@ displayMap(position.coords);
 }
 
 function displayMap( coords ) {
-var title = 'Your Location';
-var content = 'You are here: ' + coords.latitude + ', ' + coords.longitude;
-addMarker ( map, googleLatAndLong, title, content );
 
 var googleLatAndLong = new google.maps.LatLng( coords.latitude, coords.longitude );
 
@@ -48,6 +45,10 @@ mapTypeId: google.maps.MapTypeId.ROADMAP,
 
 var mapDiv = document.getElementById( 'map' );
 map = new google.maps.Map( mapDiv, mapOptions );
+
+var title = 'Your Location';
+var content = 'You are here: ' + coords.latitude + ', ' + coords.longitude;
+addMarker( map, googleLatAndLong, title, content );
 
 }
 
