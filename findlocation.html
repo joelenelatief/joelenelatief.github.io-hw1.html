@@ -1,0 +1,61 @@
+<!doctype html >
+<html lang="en" >
+<head>
+<title> How to find location of a user using HTML5 Geolocation? </title>
+<meta charset="utf-8" >
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script src="https://maps.google.com/maps/api/js?sensor=true" > </script>
+<script type="text/javascript" >
+window.onload = getLocation;
+
+/*
+Here we will check the browser supports the Geolocation API; if exists, then we will display the location
+*/
+var geo = navigator.geolocation;
+function getLocation() {
+if( geo ) {
+geo.getCurrentPosition( displayLocation );
+} else {
+alert( "Oops, Geolocation API is not supported" );
+}
+}
+
+/*
+This function displays the latitude and longitude when the browser has a location.
+*/
+function displayLocation( position ) {
+var latitude = position.coords.latitude;
+var longitude = position.coords.longitude;
+
+var div = document.getElementById( 'location' );
+div.innerHTML = "You are at Latitude: " + latitude + ", Longitude: " + longitude;
+
+displayMap(position.coords);
+}
+
+function displayMap( coords ) {
+var googleLatAndLong = new google.maps.LatLng( coords.latitude, coords.longitude );
+
+var mapOptions = {
+zoom: 10,
+center: googleLatAndLong,
+mapTypeId: google.maps.MapTypeId.ROADMAP,
+};
+
+var mapDiv = document.getElementById( 'map' );
+map = new google.maps.Map( mapDiv, mapOptions );
+}
+</script>
+</head>
+<body>
+<div class="container" >
+<h3> How to find location of a user using HTML5 Geolocation? </h3>
+
+<div id="location" >
+You are at Latitude: _________, Longitude: _________
+</div>
+
+<div id="map" > </div>
+</div>
+</body>
+</html>
